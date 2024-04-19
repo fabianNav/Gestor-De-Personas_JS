@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TODO HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 20px;
+    margin-bottom: 20px;
+}
+
+#headerTitle {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+/* TODO MODO OSCURO */
+
+#sectionSwitch {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.darkModeSwitch {
+    background-color: var(--background);
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    justify-content: space-between;
+    padding-right: 30px;
+    align-items: center;
+}
+
+.darkModeSwitch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    color: var(--primary);
+    background: none;
+}
+
+i.fa-regular.fa-moon, i.fa-regular.fa-sun {
+    color: #000;
+}
+
+.darkModeSwitch::after {
+    display: block;
+    background: #000;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 48px;
+    transition: all .5s ease;
+    content: "";
+}
+
+.darkModeSwitch.active {
+    background-color: aqua;
+}
+
+.fa-regular.fa-sun,.fa-regular.fa-moon {
+    padding: 0;
+    background: none;
+}
+
+.darkModeSwitch.active::after {
+    left: unset;
+    right: 0;
+}
+
+
+
+
+
+
