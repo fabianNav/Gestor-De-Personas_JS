@@ -5,9 +5,9 @@
 }
 
 [data-theme='dark'] {
-    --background: #000;
-    --primary: #23d423;
-    --text: #5234f3;
+    --background: #352F44;
+    --primary: #910A67;
+    --text: #FAF0E6;
 }
 [data-theme='light'] {
     --background: #fff;
@@ -29,6 +29,7 @@ header {
     justify-content: space-between;
     padding: 10px 0px 20px;
     margin-bottom: 20px;
+    background-color: var(--primary);
 }
 
 #headerTitle {
@@ -46,60 +47,24 @@ header {
 }
 
 .darkModeSwitch {
-    background-color: var(--primary);
+    background-color: var(--background);
     display: flex;
-    position: relative;
     cursor: pointer;
-    outline: none;
     border: none;
     border-radius: 30px;
     justify-content: space-between;
     margin-right: 30px;
     align-items: center;
-}
-
-.darkModeSwitch span {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    display: block;
-    color: var(--primary);
-    background: none;
+    padding: 5px;
 }
 
 i.fa-regular.fa-moon, i.fa-regular.fa-sun {
-    color: var(--background);
+    color: var(--text);
+    border: 1px solid var(--background);
+    padding: 3px;
+    border-radius: 30px;
+    background-color: var(--background);
 }
-
-.darkModeSwitch::after {
-    display: block;
-    background: var(--text);
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: unset;
-    border-radius: 48px;
-    transition: all .5s ease;
-    content: "";
-}
-
-.darkModeSwitch.active {
-    background-color: var(--primary);
-}
-
-.fa-regular.fa-sun,.fa-regular.fa-moon {
-    padding: 0;
-    background: none;
-}
-
-.darkModeSwitch.active::after {
-    left: unset;
-    right: 0;
-}
-
-
 
 
 
