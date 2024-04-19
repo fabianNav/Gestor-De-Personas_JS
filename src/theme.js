@@ -9,14 +9,10 @@ export function cambiarTema() {
     }
     function insertLogo() {
         let readLs = localStorage.getItem('theme');
-        if (readLs === 'light') {
-            switchButton.innerHTML = `
-            <span><i class="fa-regular fa-sun"></i></span>
-            `
-        } else if (readLs === 'dark') {
-            switchButton.innerHTML = `
-            <span><i class="fa-regular fa-moon"></i></span>
-            `
+        if (readLs === 'light' || colorSystem === 'light') {
+            switchButton.innerHTML = `<span><i class="fa-regular fa-sun"></i></span>`
+        } else if (readLs === 'dark' || colorSystem === 'dark') {
+            switchButton.innerHTML = `<span><i class="fa-regular fa-moon"></i></span>`
         }
     }
 
@@ -27,5 +23,6 @@ export function cambiarTema() {
         insertLogo();
     })
     setTheme(localStorage.getItem('theme') || colorSystem);
+    insertLogo();
 }
 

@@ -5,14 +5,17 @@
 }
 
 [data-theme='dark'] {
-    --background: #352F44;
-    --primary: #910A67;
-    --text: #FAF0E6;
+    --background: #444444;
+    --primary: #DA0037;
+    --text: #EDEDED;
+    --linksEffect: #D49B54;
 }
+
 [data-theme='light'] {
-    --background: #fff;
-    --primary: #5d12c5;
-    --text: #08041c;
+    --background: #FFF1DC;
+    --primary: #3A98B9;
+    --text: #08041ca4;
+    --linksEffect: #0b0b08;
 }
 
 body {
@@ -58,13 +61,130 @@ header {
     padding: 5px;
 }
 
-i.fa-regular.fa-moon, i.fa-regular.fa-sun {
+i.fa-regular.fa-moon,
+i.fa-regular.fa-sun {
     color: var(--text);
     border: 1px solid var(--background);
     padding: 3px;
     border-radius: 30px;
     background-color: var(--background);
 }
+
+
+/* TODO MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+}
+
+main form {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: fit-content;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input {
+    background-color: var(--background);
+    color: var(--text);
+    border: 1px solid var(--text);
+    border-radius: 10px;
+    padding-inline: 10px;
+}
+
+form select {
+    width: fit-content;
+    background-color: var(--background);
+    border-radius: 10px;
+    color: var(--text);
+    border: 1px solid var(--text);
+}
+
+form select option {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+/* TODO FOOTER */
+
+footer {
+    border-top: 2px solid var(--primary);
+    display: flex;
+    justify-content: center;
+}
+
+footer section {
+    margin-top: 30px;
+}
+
+footer section article {
+    display: flex;
+    align-items: center;
+}
+
+.links{
+    color: var(--text);
+    margin-inline: 20px;
+    font-size: 50px;
+    position: relative;
+    
+}
+
+.links::before {
+    content: "";
+    background-color: var(--linksEffect);
+    mix-blend-mode: color-burn;
+    width: calc(100% + 20px);
+    position: absolute;
+    height: 0;
+    left: -14px;
+    top: -5px;
+    border-radius: 40px;
+    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.links:hover::before {
+    width: calc(100% + 30px);
+    height: calc(100%);
+    padding-bottom: 10px;
+}
+
+#github:hover {
+    transition: .3s;
+    color: rgb(186, 24, 214);
+}
+
+#linkedin:hover {
+    transition: .3s;
+    color: rgb(255, 255, 255);
+}
+
+#whatsapp:hover {
+    transition: .3s;
+    color: #00ff00;
+}
+
+#mail:hover {
+    transition: .3s;
+    color: white;
+}
+
+
+
+
 
 
 
