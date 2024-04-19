@@ -1,67 +1,91 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personas</title>
-  </head>
-  <body>
-    <header>
-      <section>
-        <h1>Personas</h1>
-      </section>
-    </header> 
-    <main>
-      <section>
-        <form id="formPersona">
-          <label> Nombre:
-            <input type="text" name="nombre" id="nombre">
-          </label>
-          <label> Apellido:
-            <input type="text" name="apellido" id="apellido">
-          </label>
-          <label> Edad:
-            <input type="number" name="edad" id="edad">
-          </label>
-          <label> Correo Electronico:
-            <input type="email" name="correo" id="correo">
-          </label>
-          <label> Calle:
-            <input type="text" name="calle" id="calle">
-          </label>
-          <select name="provincia" id="provincia">
-            <option selected>Elija la provincia donde vive</option>
-            <option value="Buenos Aires">Buenos Aires</option>
-            <option value="Catamarca">Catamarca</option>
-            <option value="Chaco">Chaco</option>
-            <option value="Chubut">Chubut</option>
-            <option value="Córdoba">Córdoba</option>
-            <option value="Corrientes">Corrientes</option>
-            <option value="Entre Ríos">Entre Ríos</option>
-            <option value="Formosa">Formosa</option>
-            <option value="Jujuy">Jujuy</option>
-            <option value="La Pampa">La Pampa</option>
-            <option value="La Rioja">La Rioja</option>
-            <option value="Mendoza">Mendoza</option>
-            <option value="Misiones">Misiones</option>
-            <option value="Neuquén">Neuquén</option>
-            <option value="Río Negro">Río Negro</option>
-            <option value="Salta">Salta</option>
-            <option value="San Juan">San Juan</option>
-            <option value="San Luis">San Luis</option>
-            <option value="Santa Cruz">Santa Cruz</option>
-            <option value="Santa Fe">Santa Fe</option>
-            <option value="Santiago Del Estero">Santiago Del Estero</option>
-            <option value="Tierra Del Fuego">Tierra Del Fuego</option>
-            <option value="Tucumán">Tucumán</option>
-          </select>
-          <input type="submit" id="submit">
-        </form>
-      </section>
-    </main>
-    <footer>
 
-    </footer>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personas</title>
+</head>
+
+<body>
+  <header>
+    <section>
+      <h1>Personas</h1>
+    </section>
+    <section id="sectionSwitch">
+      <label class="switch">
+        <input type="checkbox" id="slider">
+        <span class="sliderClass"></span>
+      </label>
+    </section>
+  </header>
+  <main>
+    <section>
+      <form id="formPersona">
+        <label> Nombre:
+          <input type="text" name="nombre" id="nombre">
+        </label>
+        <label> Apellido:
+          <input type="text" name="apellido" id="apellido">
+        </label>
+        <label> Edad:
+          <input type="number" name="edad" id="edad">
+        </label>
+        <label> Correo Electronico:
+          <input type="email" name="correo" id="correo">
+        </label>
+        <select name="provincia" id="provincia">
+          <option selected>Elija la provincia donde vive</option>
+          <option value="Buenos Aires">Buenos Aires</option>
+          <option value="Catamarca">Catamarca</option>
+          <option value="Chaco">Chaco</option>
+          <option value="Chubut">Chubut</option>
+          <option value="Córdoba">Córdoba</option>
+          <option value="Corrientes">Corrientes</option>
+          <option value="Entre Ríos">Entre Ríos</option>
+          <option value="Formosa">Formosa</option>
+          <option value="Jujuy">Jujuy</option>
+          <option value="La Pampa">La Pampa</option>
+          <option value="La Rioja">La Rioja</option>
+          <option value="Mendoza">Mendoza</option>
+          <option value="Misiones">Misiones</option>
+          <option value="Neuquén">Neuquén</option>
+          <option value="Río Negro">Río Negro</option>
+          <option value="Salta">Salta</option>
+          <option value="San Juan">San Juan</option>
+          <option value="San Luis">San Luis</option>
+          <option value="Santa Cruz">Santa Cruz</option>
+          <option value="Santa Fe">Santa Fe</option>
+          <option value="Santiago Del Estero">Santiago Del Estero</option>
+          <option value="Tierra Del Fuego">Tierra Del Fuego</option>
+          <option value="Tucumán">Tucumán</option>
+        </select>
+        <label> Localidad:
+          <input type="text" name="localidad" id="localidad">
+        </label>
+        <label> Calle:
+          <input type="text" name="calle" id="calle">
+        </label>
+        <label> Direccion:
+          <input type="number" name="direccion" id="direccion">
+        </label>
+        <input type="submit" id="submit">
+      </form>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <article>
+        <a id="github" href="https://github.com/fabianNav"><i class="fa-brands fa-github"></i></a>
+        <a id="linkedin" href="https://www.linkedin.com/in/luis-fabian-navarro-a9a42a217/"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a id="whatsapp" href="https://wa.link/4vfimv"><i class="fa-brands fa-whatsapp"></i></a>
+        <a id="mail" href="mailto:time50851@gmail.com"><i class="fa-brands fa-google"></i></a>
+      </article>
+    </section>
+  </footer>
+  <script type="module" src="/main.js"></script>
+  <script src="https://kit.fontawesome.com/5095e6fda6.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
