@@ -97,12 +97,19 @@ form label {
     margin-top: 10px;
 }
 
+form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 form input {
     background-color: var(--background);
     color: var(--text);
     border: 1px solid var(--text);
     border-radius: 10px;
     padding-inline: 10px;
+    width: 200px;
 }
 
 form select {
@@ -111,11 +118,24 @@ form select {
     border-radius: 10px;
     color: var(--text);
     border: 1px solid var(--text);
+    width: 200px;
 }
 
 form select option {
     background-color: var(--background);
     color: var(--text);
+}
+
+#submit {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: var(--text);
+    color: var(--background);
+    border: 1px solid var(--background);
 }
 
 /* TODO FOOTER */
