@@ -26,25 +26,38 @@ export function insertarDatosDom() {
         direccionNumero: direccionNumero.value
     }
 
-    datosArr = datosArr.push(nuevaPersona);
+    datosArr.unshift(nuevaPersona);
 
-    const datosPersonas = datosArr.map(elemento => {
-        return `
-                                    <tr id="${elemento.id}">
-                                        <td>${elemento.nombre}</td>
-                                        <td>${elemento.apellido}</td>
-                                        <td>${elemento.edad}</td>
-                                        <td>${elemento.nacimiento}</td>
-                                        <td>${elemento.correo}</td>
-                                        <td>${elemento.provincia}</td>
-                                        <td>${elemento.localidad}</td>
-                                        <td>${elemento.calle}</td>
-                                        <td>${elemento.direccionNumero}</td>
-                                    </tr>
-    
-                            
-                    `
-    })
+    const datosPersonas = datosArr.map(e => {
+        return   `
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Edad</th>
+                                <th>Nacimiento</th>
+                                <th>Correo</th>
+                                <th>Provincia</th>
+                                <th>Localidad</th>
+                                <th>Calle</th>
+                                <th>Numero De Casa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="${e.id}">
+                                <td>${e.nombre}</td>
+                                <td>${e.apellido}</td>
+                                <td>${e.edad}</td>
+                                <td>${e.nacimiento}</td>
+                                <td>${e.correo}</td>
+                                <td>${e.provincia}</td>
+                                <td>${e.localidad}</td>
+                                <td>${e.calle}</td>
+                                <td>${e.direccionNumero}</td>
+                            </tr>
+                        </tbody>
+                    `;
+    });
     containerDatos.innerHTML += datosPersonas.join("");
 
 }
