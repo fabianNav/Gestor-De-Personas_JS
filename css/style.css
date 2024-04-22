@@ -39,6 +39,7 @@ header {
     width: 50%;
     display: flex;
     justify-content: end;
+    margin-left: 100px;
 }
 
 /* TODO MODO OSCURO */
@@ -138,6 +139,56 @@ form select option {
     border: 1px solid var(--background);
 }
 
+/* TODO TABLE */
+
+table {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.theadTable {
+    background-color: var(--primary);
+    table-layout: auto;
+    width: 200px;
+}
+
+.trTbody {
+    text-align: center;
+    cursor: pointer;
+}
+
+.trTbody:hover {
+    background-color: var(--text);
+    color: var(--primary);
+}
+
+.tdTable {
+    border-inline: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    padding-inline: 10px;
+}
+
+.contButton {
+    border: none;
+}
+
+.eliminar {
+    background-color: var(--primary);
+    color: var(--text);
+    border: 1px solid var(--primary);
+    padding: 100%;
+    cursor: pointer;
+}
+
+.eliminar:hover {
+    background-color: var(--background);
+    color: var(--text);
+    border: 1px solid var(--primary);
+}
+
+
+
+
 /* TODO FOOTER */
 
 footer {
@@ -155,12 +206,12 @@ footer section article {
     align-items: center;
 }
 
-.links{
+.links {
     color: var(--text);
     margin-inline: 20px;
     font-size: 50px;
     position: relative;
-    
+
 }
 
 .links::before {
@@ -201,11 +252,3 @@ footer section article {
     transition: .3s;
     color: white;
 }
-
-
-
-
-
-
-
-

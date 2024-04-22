@@ -26,10 +26,10 @@
           <input type="text" name="apellido" id="apellido">
         </label>
         <label> Edad:
-          <input type="number" name="edad" id="edad">
+          <input type="number" name="edad" id="edad" min="0">
         </label>
         <label> Fecha De Nacimiento:
-          <input type="date" name="nacimiento" id="nacimiento">
+          <input type="date" name="nacimiento" id="nacimiento" max="today">
         </label>
         <label> Correo Electronico:
           <input type="email" name="correo" id="correo">
@@ -69,16 +69,30 @@
           <input type="text" name="calle" id="calle">
         </label>
         <label> Numero De Casa:
-          <input type="number" name="direccion" id="direccion">
+          <input type="number" name="direccion" id="direccion" min="0">
         </label>
         <input type="submit" id="submit">
       </form>
     </section>
     <section>
       <article>
-        <table id="containerDatos">
-          
-          
+        <table>
+          <thead class="theadTable">
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Edad</th>
+              <th>Nacimiento</th>
+              <th>Correo</th>
+              <th>Provincia</th>
+              <th>Localidad</th>
+              <th>Calle</th>
+              <th>Numero De Casa</th>
+            </tr>
+          </thead>
+          <tbody id="containerDatos">
+          </tbody>
+
         </table>
       </article>
     </section>
