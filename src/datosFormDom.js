@@ -28,31 +28,31 @@ export function insertarDatosDom() {
     }
 
     datosArr.unshift(nuevaPersona);
-
-    const datosPersonas = datosArr.map(e => {
-        if ((e.id &&
-            e.nombre &&
-            e.apellido &&
-            e.edad &&
-            e.nacimiento &&
-            e.correo &&
-            e.provincia &&
-            e.localidad &&
-            e.calle &&
-            e.direccionNumero !== "")) {
+    function datosEnDOM() {
+        const datosPersonas = datosArr.map(e => {
+            if ((e.id &&
+                e.nombre &&
+                e.apellido &&
+                e.edad &&
+                e.nacimiento &&
+                e.correo &&
+                e.provincia &&
+                e.localidad &&
+                e.calle &&
+                e.direccionNumero !== "")) {
                 Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "Persona agregada",
-                showConfirmButton: false,
-                background: 'var(--background)',
-                color: 'var(--text)',
-                showConfirmButton:true,
-                timer: 1500
-            });
-            return `
+                    position: "center",
+                    icon: "success",
+                    title: "Persona agregada",
+                    showConfirmButton: false,
+                    background: 'var(--background)',
+                    color: 'var(--text)',
+                    showConfirmButton: true,
+                    timer: 1500
+                });
+                return `
                         
-                            <tr id="${e.id}" class="trTbody">
+                            <tr class="trTbody">
                                 <td class="tdTable">${e.nombre}</td>
                                 <td class="tdTable">${e.apellido}</td>
                                 <td class="tdTable">${e.edad}</td>
@@ -62,24 +62,36 @@ export function insertarDatosDom() {
                                 <td class="tdTable">${e.localidad}</td>
                                 <td class="tdTable">${e.calle}</td>
                                 <td class="tdTable">${e.direccionNumero}</td>
-                                <td><button class="eliminar">X</button></td>
+                                <td><button id="${e.id}" class="eliminar">X</button></td>
                             </tr>
                     `;
-        }
-        else {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Parece que hay datos sin llenar",
-                footer: 'Todos los datos son obligatorios',
-                background: 'var(--background)',
-                color: 'var(--text)',
-                timer: 2000
-            });
-        }
+            }
+            else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Parece que hay datos sin llenar",
+                    footer: 'Todos los datos son obligatorios',
+                    background: 'var(--background)',
+                    color: 'var(--text)',
+                    timer: 2000
+                });
+            }
+        });
+        containerDatos.innerHTML += datosPersonas.join("");
+    }
 
-    });
-    containerDatos.innerHTML += datosPersonas.join("");
 
+
+    const buttonDelete = document.querySelectorAll('.eliminar');
+    
+        buttonDelete.forEach((button) => {
+            button.addEventListener('click', (e) => {
+                const idButton = button.getAttribute('id');
+                datosArr = datosArr.filter((event) => event.id !== idButton);
+                datosEnDOM();
+            })
+        });
+    
+    datosEnDOM()
 }
-
