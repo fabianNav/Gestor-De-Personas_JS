@@ -29,7 +29,25 @@ export function insertarDatosDom() {
     datosArr.unshift(nuevaPersona);
 
     const datosPersonas = datosArr.map(e => {
-        return   `
+        if ((e.id &&
+            e.nombre &&
+            e.apellido &&
+            e.edad &&
+            e.nacimiento &&
+            e.correo &&
+            e.provincia &&
+            e.localidad &&
+            e.calle &&
+            e.direccionNumero !== "") && nacimiento) {
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Persona agregada",
+                showConfirmButton: false,
+                background: 'var(--background)',
+                color: 'var(--text)'
+            });
+            return `
                         <thead>
                             <tr>
                                 <th>Nombre</th>
@@ -57,6 +75,18 @@ export function insertarDatosDom() {
                             </tr>
                         </tbody>
                     `;
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Parece que hay datos sin llenar",
+                footer: 'Todos los datos son obligatorios',
+                background: 'var(--background)',
+                color: 'var(--text)'
+            });
+
+        }
+
     });
     containerDatos.innerHTML += datosPersonas.join("");
 
